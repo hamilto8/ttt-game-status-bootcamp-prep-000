@@ -32,6 +32,12 @@ def won?(board)
 
     elsif (board == [" ", " ", " ", " ", " ", " ", " ", " ", " "])
           return false
+    elsif (board[2] == "O" && board[4] == "O" && board[6] == "O")
+      arr = [2, 4, 6]
+      return arr
+    elsif (board[2] == "X" && board[4] == "X" && board[6] == "X")
+      arr = [2, 4, 6]
+      return arr
     elsif (full?(board))
           false
     end
