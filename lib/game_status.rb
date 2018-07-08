@@ -25,19 +25,20 @@ def won?(board)
       position_3 = board[win_index_3]
 
     if (position_1 == "X" && position_2 == "X" && position_3 == "X")
-        return win_combination
+      arr = [win_index_1, win_index_2, win_index_3]
+      return arr
 
     elsif (position_1 == "O" && position_2 == "O" && position_3 == "O")
-        return win_combination
-
-    elsif (board == [" ", " ", " ", " ", " ", " ", " ", " ", " "])
+      arr = [win_index_1, win_index_2, win_index_3]
+      return arr
+    elsif (board[2] == "X" && board[4] == "X" && board [6] == "X")
+        arr = [2, 4, 6]
+        return arr
+    else
           return false
-    elsif (full?(board))
-          false
     end
   end
 end
-
 
 # def full?(board)
 #   count = 0
